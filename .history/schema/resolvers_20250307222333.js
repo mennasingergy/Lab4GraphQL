@@ -6,7 +6,7 @@ const resolvers = {
         users() {
             return UserList;
         },
-        user: (_, args) => {
+        user: (_,args) => {
             const id = args.id;
             return UserList.find((user) => user.id === parseInt(id));
         }
@@ -24,6 +24,8 @@ const resolvers = {
         },
         //create update user mutation here
         updateUsername(parent, args) {
+            // const id = args.input.id;
+            // const newUsername = args.input.newUsername;
             let updateduser;
             const { id, newUsername } = args.input
             UserList.forEach((user) => {
@@ -35,13 +37,13 @@ const resolvers = {
             });
             return updateduser;
         },
-        //create delete user mutation here
-        deleteUser: (parent, args) => {
+           //create delete user mutation here
+           deleteUser: (parent, args) => {
             const id = args.id;
             _.remove(UserList, (user) => user.id === Number(id));
             return null;
         },
-
+     
     },
 }
 

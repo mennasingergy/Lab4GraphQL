@@ -36,6 +36,7 @@ const typeDefs = gql`
         createUser(user:CreateUserInput!): User
         # create update user mutation here using inputs :)
         updateUsername(input: UpdateUsernameInput!):User
+
         # create delete user mutation here
         deleteUser(id:ID!): User
     }
