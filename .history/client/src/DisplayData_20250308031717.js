@@ -52,7 +52,7 @@ function DisplayData() {
     const [nationality, setNationality] = useState("");
     const { data, loading, error, refetch } = useQuery(QUERY_ALL_Users)
     const [fetchUserById, { data: userById, error: fetchUserError, }] = useLazyQuery(GET_USER_BY_ID)
-
+]
     if (loading) {
         return <h1>DATA IS LOADING...</h1>
     }
