@@ -2,7 +2,7 @@
   "name": "lab4",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
+  "ty"
   "scripts": {
     "start": "nodemon server/index.js"
   },
