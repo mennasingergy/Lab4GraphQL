@@ -8,7 +8,7 @@ query getUsers{
     name,
     username,
     nationality
-    age
+    
     friends{
       name
       age
