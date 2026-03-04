@@ -4,6 +4,7 @@ import resolvers from "./schema/resolvers.js";
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
-server.listen({ port: 7001 }).then(({ url }) => {
+server.listen().then(({ url }) => {
+    listen: 
     console.log(`Server ready at ${url}`);
 });

@@ -33,6 +33,7 @@ const typeDefs = gql`
 
     type Mutation{
        #write your code here: createUser mutation with CreateUserInput as argument and return type User
+        createUser(input: CreateUserInput!): User
         updateUsername(input: UpdateUsernameInput!):User
         deleteUser(id: ID!): User
     }

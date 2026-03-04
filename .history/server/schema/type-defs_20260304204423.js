@@ -13,8 +13,8 @@ const typeDefs = gql`
 
 
     type Query { 
-        getAllUsers: [User!]!
-        getUser(id: ID!): User!
+        users: [User!]!
+        user(id: ID!): User!
     }
 
     
@@ -22,7 +22,10 @@ const typeDefs = gql`
     input CreateUserInput{
        #write your ccode here
 
-
+        name: String!
+        username: String!
+        age: Int!
+        nationality: Nationality = BRAZIL
     }
 
     input UpdateUsernameInput{ 

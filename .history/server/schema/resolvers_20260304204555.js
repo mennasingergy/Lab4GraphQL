@@ -4,10 +4,10 @@ import _ from "lodash";
 const resolvers = {
     Query: {
         // USER RESOLVERS
-        getAllUsers: () => {
+        users: () => {
             return UserList;
         },
-        getUser: (parent, args) => {
+        user: (parent, args) => {
             const id = args.id;
             const user = _.find(UserList, { id: Number(id) });
             return user;
@@ -23,10 +23,16 @@ const resolvers = {
             return user;
         },
         //create update user mutation  here 
-
+            updateUsername: (parent, args) => {
+                const id = args.id;
+                const username = args.username;
+                const user = _.find(UserList, { id: Number(id) });
+                user.username = username;
+                return user;
+            },
+       
         //create delete user mutation here
-
-    
+       
     },
 }
 

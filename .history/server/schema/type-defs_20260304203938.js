@@ -13,16 +13,14 @@ const typeDefs = gql`
 
 
     type Query { 
-        getAllUsers: [User!]!
-        getUser(id: ID!): User!
+        users: [User!]!
+        user(id: ID!): User!
     }
 
     
     # create user input:
     input CreateUserInput{
-       #write your ccode here
-
-
+       
     }
 
     input UpdateUsernameInput{ 
@@ -32,7 +30,7 @@ const typeDefs = gql`
 }
 
     type Mutation{
-       #write your code here: createUser mutation with CreateUserInput as argument and return type User
+        createUser(user:CreateUserInput!): User
         updateUsername(input: UpdateUsernameInput!):User
         deleteUser(id: ID!): User
     }

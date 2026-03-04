@@ -23,6 +23,18 @@ const resolvers = {
             return user;
         },
         //create update user mutation  here 
+        updateUsername: (parent, args) => {
+            const { id, newUsername } = args.input;
+            let userUpdated;
+            UserList.forEach((user) => {
+                if (user.id === Number(id)) {
+                    user.username = newUsername;
+                    userUpdated = user;
+                }
+            });
+
+            return userUpdated;
+        },
 
         //create delete user mutation here
 

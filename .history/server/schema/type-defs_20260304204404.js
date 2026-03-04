@@ -13,16 +13,15 @@ const typeDefs = gql`
 
 
     type Query { 
-        getAllUsers: [User!]!
-        getUser(id: ID!): User!
+        users: [User!]!
+        user(id: ID!): User!
     }
 
     
     # create user input:
     input CreateUserInput{
        #write your ccode here
-
-
+       
     }
 
     input UpdateUsernameInput{ 
